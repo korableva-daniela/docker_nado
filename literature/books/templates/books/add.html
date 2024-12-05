@@ -1,0 +1,21 @@
+{% extends 'books/layout.html '%}
+
+{% block content %}
+    <div class="features">
+        <h1>Форма для добавления информации о книге</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{form1.first_name}}<br>
+            {{form1.second_name}}<br>
+            {{form1.email}}<br>
+
+            {{form2.title}}<br>
+
+
+            <span>{{error}}</span>
+            <button class="btn btn-success" type="submit">Добавить</button>
+        </form>
+    </div>
+{% endblock %}
+{% block title %}Форма для добавления записи{% endblock %}
+

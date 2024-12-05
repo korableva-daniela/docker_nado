@@ -1,0 +1,25 @@
+{% extends 'books/layout.html '%}
+
+
+
+{% block content %}
+    <div class="features">
+        <h1>Авторы</h1>
+        {% for w in author %}
+        <div class="alert alert-warning">
+            <h3>{{w.first_name}}</h3>
+            <h3>{{w.second_name}}</h3>
+            <h5>Книги:</h5>
+            {% for wp in books_name %}
+                {%if w == wp.worker%}
+
+                            <p>{{p.title}}</p>
+
+                {%endif%}
+            {% endfor %}
+            <a href="{% url 'info' w.id %}" class="btn btn-warning">Читать детальнее об авторе</a>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+{% block title %}Авторы{% endblock %}
