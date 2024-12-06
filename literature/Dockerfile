@@ -3,4 +3,4 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /app
 ADD . /app
 RUN pip install -r requirements.txt
-ENTRYPOINT ["python", "literature\manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
